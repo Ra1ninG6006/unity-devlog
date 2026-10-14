@@ -12,8 +12,8 @@
 
 ## 2. 基础水平
 
-- C#：有基础，已私下补过一轮，但掌握程度需要接手时用文末「C# 自测清单」快速核对。
-- Unity：零基础起步。已学完编辑器、组件、生命周期、俯视角移动 + 鼠标瞄准。还没碰：动画、UI、音效、碰撞、存档。
+- C#：已复习 float、字段访问、方法参数与返回值、赋值和判断、bool、if / else；仍需提示，尚未独立掌握。类与对象、循环、集合等尚未核对。
+- Unity：已完成俯视角移动、鼠标瞄准、相机跟随和基础碰撞，开始接入 Animator。尚未完成动画状态切换；未学 UI、音效、存档。
 
 ## 3. 环境
 
@@ -26,33 +26,36 @@
 
 ### 已完成
 
-- 阶段 0 入门：编辑器界面、组件（GameObject 是空壳，能力来自组件）、生命周期（Awake → Start → Update）。
-- 阶段 1 俯视角基础，完成前两周：
-  - 第 1 周移动：WASD 八方向移动，Rigidbody2D。
-  - 第 2 周鼠标瞄准：ScreenToWorldPoint 转世界坐标，Atan2 + Rad2Deg 算角度，Quaternion.Euler 旋转朝向鼠标。
+- 阶段 0：编辑器、组件、生命周期。
+- 阶段 1 前两周：Rigidbody2D 八方向移动、鼠标坐标换算和旋转瞄准。
+- 第 3 周：相机跟随、网格背景；玩家与墙的 Collider2D 碰撞，用户确认撞墙和沿墙移动正常。
+- 动画入门：AI 辅助生成战士素材，切分 4 帧，创建 8 FPS 循环 Walk 动画，用户反馈已接入 Animator。
+- 2026-09-22 至 2026-10-14 未打卡期间补习 C 语言。
 
-### 现有代码（`D:\unity\My first 2d\Assets`）
+### 现有资源
 
-- `LifecycleDemo.cs`：验证生命周期的演示脚本。
-- `Scripts\PlayerController.cs`：俯视角玩家控制器，含移动（FixedUpdate + rb.velocity）和瞄准（Update + transform.rotation）。
+- `Scripts/PlayerController.cs`：移动与身体朝向鼠标，尚未拆分武器瞄准。
+- `Scripts/CameraFollow.cs`：LateUpdate 跟随，保持相机 z。
+- `Scripts/WorldGridBackground.cs`：运行时生成世界网格背景。
+- `Art/Player/warrior-walk-down-v1.png`：朝下走路图，已切成 4 帧。
+- `Animations/Player/Walk.anim`：循环走路动画。
+- `Editor/WarriorAnimationSetup.cs`：自动创建切分和动画资源的编辑器工具。
 
-### 已掌握的 Unity 知识点
+### 理解程度与限制
 
-- 组件模型、生命周期
-- Rigidbody2D 物理移动（用 rb.velocity，不动 transform.position）
-- FixedUpdate（物理）与 Update（视觉）的分工
-- 屏幕坐标（像素）与世界坐标（米）两套体系，要换算
-- 方向向量归一化、Atan2 / Rad2Deg / Quaternion.Euler
+- 功能可运行不等于独立掌握；本次多处由 AI 辅助制作，应安排亲手修改和解释。
+- 仅有朝下走路素材，Idle / Walk 切换尚未完成。
+- 身体与剑在同一张图片中，武器独立瞄准尚未实现。
+- 玩家挂载、缩放、碰撞轮廓需在替换外观后复查，不能沿用旧六边形设置就认定完成。
 
 ## 5. 下一步（从这里继续）
 
-按 PLAN.md，阶段 1 还剩：
-
-- 第 3 周：相机跟随、Animator 动画、Collider2D 碰撞。
-- 第 4 周：UI（Canvas、血条）+ 综合练手，产出「俯视角移动 + 射击 + 打靶」小 demo，提交 Git。
-- 之后进阶段 2 主线课《地牢枪手》。
-
-接手建议顺序：先核对 C# 自测清单补薄弱点，再从第 3 周相机跟随开始。
+- 暂缓新增功能，边做边补 C#；表达简洁，避免连续重复的小测。
+- 先检查 PlayerController 中 AimAtMouse 的调用，取消身体随鼠标旋转。
+- 使用 Animator 的 bool 参数实现移动播放 Walk、停止播放 Idle。
+- 复查角色缩放和碰撞轮廓，清理玩家身上误挂的 CameraFollow（如仍存在）。
+- 再拆分 Player / Visual / AimPivot / Weapon，准备不带剑身体与单独武器素材，实现攻击朝向鼠标。
+- 补齐基础动画后，再继续阶段 1 的 UI 和移动射击打靶 demo；之后进入主线课。
 
 ## 6. 教学方式（必须遵守）
 
