@@ -6,9 +6,8 @@
 
 独立做出一个 2D Unity 作品（俯视角肉鸽爬塔）。
 
-## 交接
+## 规划
 
-- [CONTEXT.md](CONTEXT.md)：当前进度快照 + 给 AI 助手的交接说明
 - [PLAN.md](PLAN.md)：6 个月逐周规划
 
 ## 日志
