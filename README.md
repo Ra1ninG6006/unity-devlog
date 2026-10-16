@@ -8,7 +8,8 @@
 
 ## 规划
 
-- [PLAN.md](PLAN.md)：至 2027 年 2 月底的学习与实习准备计划
+- [PLAN.md](PLAN.md)：学习、游戏开发里程碑与实习准备计划
+- [GAME_DESIGN.md](GAME_DESIGN.md)：三关、九件装备、职业组合与初始武器解锁；完整开发约 180-240 小时
 - [岗位与公开简历调研](research/2026-10-16-game-internships.md)：规划依据与参考来源
 
 ## 日志
