@@ -1,0 +1,225 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "scene": "Assets/Scenes/SampleScene.unity",
+  "unityVersion": "2022.3.62f3c1",
+  "note": "摘录现存运行报告的检查名称和结果；日志整理时没有重新运行测试。",
+  "reports": [
+    {
+      "sourceReport": "Library/EquipmentLibraryCheck.json",
+      "sourceSha256": "bd0a61063dbad444932705cb5be573673cb901ea18763410eea58a7005ada207",
+      "pass": true,
+      "passed": 19,
+      "total": 19,
+      "error": "",
+      "results": [
+        {
+          "test": "三职业装备分别列库",
+          "pass": true
+        },
+        {
+          "test": "正式开局只有一把剑并共用原实例",
+          "pass": true
+        },
+        {
+          "test": "加入弓和手里剑且复制库模板",
+          "pass": true
+        },
+        {
+          "test": "重复装备与第四件装备被拒绝",
+          "pass": true
+        },
+        {
+          "test": "三槽选择与套装统计",
+          "pass": true
+        },
+        {
+          "test": "锻造跟随当前武器且换装后保留",
+          "pass": true
+        },
+        {
+          "test": "暂停时不能切换、添加或发射",
+          "pass": true
+        },
+        {
+          "test": "弓箭真实命中第一敌人且不贯穿",
+          "pass": true
+        },
+        {
+          "test": "远程攻击间隔拦截重复连点",
+          "pass": true
+        },
+        {
+          "test": "手里剑一轮三枚扇形散射且不重复发射",
+          "pass": true
+        },
+        {
+          "test": "每枚手里剑发射时固定为半点伤害",
+          "pass": true
+        },
+        {
+          "test": "中央手里剑真实贯穿两敌各扣半点",
+          "pass": true
+        },
+        {
+          "test": "墙体阻挡弓箭",
+          "pass": true
+        },
+        {
+          "test": "墙体阻挡全部三枚手里剑",
+          "pass": true
+        },
+        {
+          "test": "投射物达到射程自动销毁",
+          "pass": true
+        },
+        {
+          "test": "投射物达到寿命自动销毁",
+          "pass": true
+        },
+        {
+          "test": "近距离三枚同中合计一点五伤害",
+          "pass": true
+        },
+        {
+          "test": "死亡后不能切换、添加或发射",
+          "pass": true
+        },
+        {
+          "test": "库模板未被锻造或测试污染",
+          "pass": true
+        }
+      ],
+      "generatedAtUtc": "2026-10-26T16:33:41.2951669Z",
+      "runtimeErrors": []
+    },
+    {
+      "sourceReport": "Library/WeaponForgeCheck.json",
+      "sourceSha256": "751c162bd3485cdf76dbf898ed697e2f9303dda6f99b5cd12dc549d16d1b54ee",
+      "pass": true,
+      "passed": 19,
+      "total": 19,
+      "error": "",
+      "results": [
+        {
+          "test": "场景武器数据可序列化",
+          "pass": true
+        },
+        {
+          "test": "两只史莱姆恢复启用并保存",
+          "pass": true
+        },
+        {
+          "test": "金币与锻造 HUD 绑定和费用",
+          "pass": true
+        },
+        {
+          "test": "金币不足不扣款不加伤",
+          "pass": true
+        },
+        {
+          "test": "金币刚好够时锻造一次",
+          "pass": true
+        },
+        {
+          "test": "连续两次锻造各扣一次费用",
+          "pass": true
+        },
+        {
+          "test": "连续锻造后余额不足不再变化",
+          "pass": true
+        },
+        {
+          "test": "暂停时不能锻造",
+          "pass": true
+        },
+        {
+          "test": "暂停时不能升级生命",
+          "pass": true
+        },
+        {
+          "test": "暂停时直接扣款入口也不扣费",
+          "pass": true
+        },
+        {
+          "test": "禁用武器不扣款不加伤",
+          "pass": true
+        },
+        {
+          "test": "没有可用武器不扣款不加伤",
+          "pass": true
+        },
+        {
+          "test": "武器数据为空不扣款不异常",
+          "pass": true
+        },
+        {
+          "test": "无效增加量与伤害溢出被拦截",
+          "pass": true
+        },
+        {
+          "test": "伤害已达整数上限时锻造不扣款",
+          "pass": true
+        },
+        {
+          "test": "正常挥击实际扣除基础伤害",
+          "pass": true
+        },
+        {
+          "test": "锻造后正常挥击实际扣除增加后的伤害",
+          "pass": true
+        },
+        {
+          "test": "死亡后不能锻造或扣款",
+          "pass": true
+        },
+        {
+          "test": "死亡后不能升级生命或扣款",
+          "pass": true
+        }
+      ],
+      "generatedAtUtc": "2026-10-26T16:34:24.0300276Z",
+      "runtimeErrors": []
+    },
+    {
+      "sourceReport": "Library/SlimeHitTimingCheck.json",
+      "sourceSha256": "ed7eab1da2672e1802ccf19027876b67fc003a49526ff3faa05e815ea897b371",
+      "pass": true,
+      "passed": 6,
+      "total": 6,
+      "error": "",
+      "results": [
+        {
+          "enemy": "boss",
+          "test": "接触蓄力与单次伤害",
+          "pass": true
+        },
+        {
+          "enemy": "boss",
+          "test": "蓄力后离开",
+          "pass": true
+        },
+        {
+          "enemy": "boss",
+          "test": "蓄力中被击退",
+          "pass": true
+        },
+        {
+          "enemy": "boss2",
+          "test": "接触蓄力与单次伤害",
+          "pass": true
+        },
+        {
+          "enemy": "boss2",
+          "test": "蓄力后离开",
+          "pass": true
+        },
+        {
+          "enemy": "boss2",
+          "test": "蓄力中被击退",
+          "pass": true
+        }
+      ]
+    }
+  ]
+}
